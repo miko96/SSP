@@ -1,0 +1,36 @@
+body{
+    background-color: lightgray;
+}
+
+.allNewsBlock{
+    /*border: 4px double black; /* Параметры границы */
+    background: lightgray; /* Цвет фона */
+    padding: 10px; /* Поля вокруг текста */
+}
+.newsBlock
+{
+    margin: 0 auto;
+    margin-bottom: 20px;
+    
+    width: 60%;
+    border: 4px double black; /* Параметры границы */
+    padding: 30px;
+}
+.newsBlock-Image{
+
+    width: 80%;
+    margin: auto;
+}
+
+.addNewsBlock{
+  margin: 0 auto;
+    margin-bottom: 20px;
+    
+    width: 60%;
+    border: 4px double black; /* Параметры границы */
+    padding: 30px;
+}
+.filt{
+    margin-left: 400px;
+    margin-bottom: 20px;
+}

@@ -1,0 +1,42 @@
+<!doctype html>
+<html ng-app="myApp">
+
+<head>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <div class="allNewsBlock">
+        <div ng-controller="contentController">
+            <h1 align="center">Google News</h1>
+            <div class="filt">
+                <label>Filter:<input ng-model="filter"></label>
+            </div>
+            <div class="newsBlock" ng-repeat="news in NewsData | limitTo : filter">
+                <h3>Author: {{ news.author}}</h3>
+                <h3>Title: {{ news.title}}</h3>
+                <h3>Description: {{ news.description}}</h3>
+                <img class="newsBlock-Image" ng-src="{{news.urlToImage}}">
+                <br><a href={{news.url}}>Show news</a>
+            </div>
+
+            <div class="addNewsBlock">
+                <label>Author:<input type="text" ng-model="author"></label><br>
+                <label>Title:<input type="text" ng-model="title"></label><br>
+                <label>Description:<input type="text" ng-model="description"></label><br>
+                <label>Image URL:<input type="text" ng-model="imgurl"></label><br>
+                <label>Link:<input type="text" ng-model="link"></label>
+                <button my-enter="AddNews(author,title,description,imgurl,link)">Добавить новость</button>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
